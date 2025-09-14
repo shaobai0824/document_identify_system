@@ -1,0 +1,53 @@
+# Web 框架
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# 資料庫 (Windows 相容版本)
+sqlalchemy[asyncio]==2.0.23
+alembic==1.12.1
+asyncpg==0.29.0  # 純 Python PostgreSQL 驅動，Windows 友好
+
+# 任務佇列
+celery==5.3.4
+redis==5.0.1
+
+# 物件儲存
+boto3==1.34.0
+minio==7.2.0
+
+# OCR 引擎
+pytesseract==0.3.10
+opencv-python==4.8.1.78
+Pillow==10.1.0
+pdf2image==1.16.3
+
+# LLM 整合
+openai==1.3.7
+google-cloud-vision==3.4.5
+
+# 影像處理
+numpy==1.24.4
+scikit-image==0.22.0
+
+# 工具與安全
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+httpx==0.25.2
+
+# 日誌與監控
+structlog==23.2.0
+prometheus-client==0.19.0
+
+# 開發工具
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# 型別提示
+types-redis==4.6.0.11
+types-requests==2.31.0.10

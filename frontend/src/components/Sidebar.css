@@ -1,0 +1,177 @@
+.sidebar {
+  width: 280px;
+  background: #2d3748;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  border-bottom: 1px solid #4a5568;
+  padding-bottom: 1.5rem;
+}
+
+.sidebar-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sidebar-section h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #a0aec0;
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+}
+
+.sidebar-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-item:hover {
+  background: #4a5568;
+  color: white;
+}
+
+.sidebar-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 500;
+}
+
+.sidebar-item .icon {
+  font-size: 1.1rem;
+}
+
+.selected-template {
+  background: #1a202c;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.template-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.template-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+
+.template-meta {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.template-status {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.status {
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.status.active {
+  background: #22543d;
+  color: #9ae6b4;
+}
+
+.status.inactive {
+  background: #742a2a;
+  color: #feb2b2;
+}
+
+.system-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #68d391;
+  box-shadow: 0 0 4px rgba(104, 211, 145, 0.5);
+}
+
+.status-indicator.online {
+  background: #68d391;
+  animation: pulse 2s infinite;
+}
+
+.status-indicator.offline {
+  background: #f56565;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 4px rgba(104, 211, 145, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(104, 211, 145, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 4px rgba(104, 211, 145, 0.5);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    max-height: 200px;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  
+  .sidebar-section {
+    min-width: 200px;
+    border-bottom: none;
+    border-right: 1px solid #4a5568;
+    padding-right: 1rem;
+  }
+  
+  .sidebar-section:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}

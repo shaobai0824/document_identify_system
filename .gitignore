@@ -1,0 +1,7 @@
+dev_docs/
+docs/
+.env
+.cursorrules
+*.db
+venv-py311/
+GEMINI.md
